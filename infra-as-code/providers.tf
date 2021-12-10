@@ -3,13 +3,13 @@ terraform {
         aws = {
             source = "terraform-local/aws"
             version = "3.68.0"
+            
         }
     }
 }
 provider "aws" {
-    
-
-    region = var.region
+    profile = "local"
+    #region = var.region
     access_key = "test"
     secret_key = "test"
     s3_force_path_style = true
@@ -33,9 +33,9 @@ provider "aws" {
       kinesis = "http://localhost:4566"
       kms = "http://localhost:4566"
       lambda = "http://localhost:4566"
-      logs = "http://localhost:4566"
+      #logs = "http://localhost:4566"
       redshift = "http://localhost:4566"
-      resource-groups = "http://localhost:4566"
+      #resource-groups = "http://localhost:4566"
       resourcegroupstaggingapi = "http://localhost:4566"
       route53 = "http://localhost:4566"
       route53resolver = "http://localhost:4566"
@@ -51,4 +51,11 @@ provider "aws" {
       swf = "http://localhost:4566"
 
     } 
+   
 }
+
+ # Create Bucket
+    resource "aws_s3_bucket" "b" {
+      bucket = "my-shitty-bucket-terraform"
+      acl    = "public-read"
+    }

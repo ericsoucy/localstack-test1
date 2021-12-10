@@ -28,5 +28,6 @@ mkdir -p terraform.d/plugins/registry.terraform.io/terraform-provider-aws/3.68.0
 
 ```bash
 terraform init
+terraform init -plugin-dir ./.terraform.d/plugins/
 terraform plan
 ```

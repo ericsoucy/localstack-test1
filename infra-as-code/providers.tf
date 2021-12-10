@@ -63,3 +63,11 @@ resource "aws_s3_bucket" "b" {
   bucket = "my-shitty-bucket-terraform"
   acl    = "public-read"
 }
+
+# Upload an object
+resource "aws_s3_bucket_object" "object" {
+  bucket = aws_s3_bucket.b.id
+  key    = "somefile-to-upload.txt"
+  acl    = "public-read"
+  source = "../somefile-to-upload.txt"
+}

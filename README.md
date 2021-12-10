@@ -24,6 +24,8 @@ aws --endpoint-url=http://localhost:4566 lambda list-functions --profile local
 wget https://releases.hashicorp.com/terraform-provider-aws/3.68.0/terraform-provider-aws_3.68.0_linux_amd64.zip --no-check-certificate
 mkdir -p terraform.d/plugins/registry.terraform.io/terraform-provider-aws/3.68.0/linux_amd64
 
+\localstack-test1\infra-as-code\.terraform.d\plugins\registry.terraform.io\terraform-local\aws\3.68.0\linux_amd64
+
 ```bash
 terraform init
 terraform plan

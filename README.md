@@ -17,18 +17,21 @@ aws --endpoint-url=http://localhost:4566 lambda list-functions --profile local
 ```
 
 ## Infrastructure Setup using Localstack and Terraform
+
 <https://www.youtube.com/watch?v=2IUrUkH4mvQ>
 
 <https://www.unixarena.com/2021/06/terraform-x509-certificate-error-terraform-in-an-offline-mode.html/>
 
+```bash
 wget https://releases.hashicorp.com/terraform-provider-aws/3.68.0/terraform-provider-aws_3.68.0_linux_amd64.zip --no-check-certificate
 mkdir -p terraform.d/plugins/registry.terraform.io/terraform-provider-aws/3.68.0/linux_amd64
+```
 
 \localstack-test1\infra-as-code\.terraform.d\plugins\registry.terraform.io\terraform-local\aws\3.68.0\linux_amd64
 
 <https://onexlab-io.medium.com/localstack-s3-terraform-9b1554e2add8>
 
-```bash
+```bash terraform
 terraform init
 terraform init -plugin-dir ./.terraform.d/plugins/
 

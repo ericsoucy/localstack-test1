@@ -2,3 +2,4 @@ infra-as-code/.terraform.lock.hcl
 
 
 infra-as-code/.terraform.d/plugins/registry.terraform.io/terraform-local/aws/3.68.0/linux_amd64/terraform-provider-aws_v3.68.0_x5
+infra-as-code/terraform.tfstate

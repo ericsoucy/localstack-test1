@@ -48,6 +48,5 @@ terraform validate
 terraform plan
 terraform apply
 
-aws s3 ls s3://my-shitty-bucket-terraform --endpoint-url=http://
-localhost:4566 --profile local
+aws s3 ls s3://my-shitty-bucket-terraform --endpoint-url=http://localhost:4566 --profile local
 ```

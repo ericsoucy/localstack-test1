@@ -3,3 +3,37 @@ infra-as-code/.terraform.lock.hcl
 
 infra-as-code/.terraform.d/plugins/registry.terraform.io/terraform-local/aws/3.68.0/linux_amd64/terraform-provider-aws_v3.68.0_x5
 infra-as-code/terraform.tfstate
+infra-as-code/.terraform/providers/registry.terraform.io/hashicorp/aws/3.68.0/linux_amd64/terraform-provider-aws_v3.68.0_x5
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/

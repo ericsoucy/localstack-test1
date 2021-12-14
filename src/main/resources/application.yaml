@@ -5,4 +5,10 @@ cloud:
     stack:
       auto: false
     credentials:
+      instanceProfile: true
       profile-name: local
+      profile-path: c:\Users\eric\.aws\credentials
+config:
+  aws:
+    s3:
+      url: http://172.17.177.253:4566

@@ -1,6 +1,6 @@
 package com.example.demolocalstack.s3;
 
-import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.*;
 import com.amazonaws.services.s3.model.lifecycle.LifecycleFilter;
 import com.amazonaws.waiters.WaiterParameters;
@@ -18,10 +18,11 @@ import java.util.stream.Collectors;
 @Slf4j
 @Repository
 public class S3Repository {
-    private final AmazonS3Client s3Client;
 
-    public S3Repository(AmazonS3Client s3Client){
-        this.s3Client = s3Client;
+    private final AmazonS3 s3Client;
+
+    public S3Repository(AmazonS3 amazonS3){
+        this.s3Client = amazonS3;
     }
 
     public void create(String bucket) {
@@ -117,5 +118,11 @@ public class S3Repository {
         var url = s3Client.generatePresignedUrl(bucket, key, date);
         log.info("Generated the signature " + url);
         return url;
+    }
+
+    public S3ObjectInputStream downloadFileFromS3Bucket(final String bucketName,final String fileName) {
+        log.info("Downloading file '{}' from bucket: '{}' ", fileName, bucketName);
+        final S3Object s3Object = s3Client.getObject(bucketName, fileName);
+        return s3Object.getObjectContent();
     }
 }

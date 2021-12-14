@@ -52,3 +52,7 @@ aws s3 ls s3://my-shitty-bucket-terraform --endpoint-url=http://localhost:4566 -
 
 terraform destroy
 ```
+
+
+# S3 with java
+run terraform in infra-as-code directory: terraform apply

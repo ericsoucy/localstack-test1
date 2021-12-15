@@ -11,4 +11,8 @@ cloud:
 config:
   aws:
     s3:
-      url: http://172.17.177.253:4566
+      url: http://127.0.0.1:4566
+    dynamodb:
+      endpoint: http://127.0.0.1:4566
+      accesskey: test
+      secretkey: test

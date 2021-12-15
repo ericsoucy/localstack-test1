@@ -4,6 +4,10 @@
 
 // run localstack
 podman run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack
+
+// to use host network
+podman run --rm -it -p 4566:4566 -p 4571:4571 --network host localstack/localstack
+
 curl http://localhost:4566/health | jq
 
 // install aws cli

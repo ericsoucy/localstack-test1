@@ -15,7 +15,7 @@ import java.util.List;
 
 @Slf4j
 @Component
-public class MyRunner implements CommandLineRunner {
+public class MyS3Runner implements CommandLineRunner {
 
   @Autowired private S3Repository repository;
 

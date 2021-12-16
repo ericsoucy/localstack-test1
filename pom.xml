@@ -15,11 +15,18 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
-        <spring-cloud-aws-version>2.3.2</spring-cloud-aws-version>
-        <aws-java-sdk-dynamodb.version>1.11.761</aws-java-sdk-dynamodb.version>
+        <spring-cloud-aws-version>2.3.3</spring-cloud-aws-version>
+        <aws-java-sdk-dynamodb.version>1.12.129</aws-java-sdk-dynamodb.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>io.awspring.cloud</groupId>
+                <artifactId>spring-cloud-aws-dependencies</artifactId>
+                <version>${spring-cloud-aws-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-releasetrain</artifactId>
@@ -30,6 +37,12 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
+
+        <dependency>
+            <groupId>io.awspring.cloud</groupId>
+            <artifactId>spring-cloud-starter-aws-messaging</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.github.derjust</groupId>
             <artifactId>spring-data-dynamodb</artifactId>
@@ -61,11 +74,11 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>io.awspring.cloud</groupId>
             <artifactId>spring-cloud-starter-aws</artifactId>
             <version>${spring-cloud-aws-version}</version>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 

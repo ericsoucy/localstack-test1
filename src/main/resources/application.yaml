@@ -8,6 +8,17 @@ cloud:
       instanceProfile: true
       profile-name: local
       profile-path: c:\Users\eric\.aws\credentials
+    sns:
+      order-created:
+        arn: arn:aws:sns:ca-central-1:000000000000:order-created-topic:d42e3e2e-1a0a-408f-a396-6f6fc1257926
+        name: order-created-topic
+    sqs:
+      order-queue:
+        url: http://127.0.0.1:4566/000000000000/order-queue
+        name: order-queue
+      order-queue-2:
+        url: http://127.0.0.1:4566/000000000000/order-queue-2
+        name: order-queue-2
 config:
   aws:
     s3:
@@ -16,3 +27,7 @@ config:
       endpoint: http://127.0.0.1:4566
       accesskey: test
       secretkey: test
+    sns:
+      url: http://127.0.0.1:4566
+    sqs:
+      url: http://127.0.0.1:4566

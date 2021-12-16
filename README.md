@@ -60,3 +60,6 @@ terraform destroy
 
 # S3 with java
 run terraform in infra-as-code directory: terraform apply
+
+# SQS SNS
+<https://auth0.com/blog/amp/spring-cloud-messaging-with-aws-and-localstack/>
